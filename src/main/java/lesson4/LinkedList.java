@@ -1,6 +1,6 @@
 package lesson4;
 
-public interface LinkedList<E>  {
+public interface LinkedList<E> {
 
     void insertFirst(E value);
 
@@ -21,10 +21,12 @@ public interface LinkedList<E>  {
     class Node<E> {
         E item;
         Node<E> next;
+        Node<E> prev;
 
-        public Node(E item, Node<E> next) {
+        public Node(E item, Node<E> next, Node<E> prev) {
             this.item = item;
             this.next = next;
+            this.prev = prev;
         }
     }
 

@@ -9,29 +9,15 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterable<E> {
 
     @Override
     public void insertFirst(E value) {
-        first = new Node<>(value, first);
-/*        Node<E> actualFirst = first;
-        Node<E> newFirst = new Node<>(value, actualFirst);
-        this.first = newFirst;*/
-        size++;
     }
 
     @Override
     public E removeFirst() {
-        if (isEmpty()) {
-            return null;
-        }
-
-        Node<E> removedNode = first;
-        first = removedNode.next;
-        removedNode.next = null;
-        size--;
-        return removedNode.item;
+        return null;
     }
 
     @Override
     public boolean remove(E value) {
-
         Node<E> prev = null;
         Node<E> current = first;
 
@@ -75,7 +61,6 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterable<E> {
     public boolean contains(E value) {
         return indexOf(value) != null;
     }
-
 
 
     @Override
