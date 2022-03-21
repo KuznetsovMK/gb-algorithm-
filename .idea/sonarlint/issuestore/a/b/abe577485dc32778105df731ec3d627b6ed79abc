@@ -1,0 +1,28 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(â±Ò¡ûÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(•œîıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ó‚şüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(—¨µº
+N	java:S106"9Replace this use of System.out or System.err by a logger.( ×ËŞ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ü˜øÿüÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(ÈÄı,
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¬‘ı
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ğ°´Å
+M	java:S106 "9Replace this use of System.out or System.err by a logger.(‚ú
+S	java:S106("9Replace this use of System.out or System.err by a logger.(ˆğ«Ôÿÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(À‹™ùùÿÿÿÿ
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(ñ‘µ³ùÿÿÿÿ
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(§€Ä¼
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(éØ¦î
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(¦³ÂŸ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(ß»í‚şÿÿÿÿ
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(´„Õşÿÿÿÿ8Òå®Ÿø/
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(ÎËÎ„øÿÿÿÿ8Óå®Ÿø/
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(ÉíÍÅúÿÿÿÿ8çË²Ÿø/
+R
+java:S1128"0Remove this unused import 'lesson3.queue.Queue'.(×Ï…àùÿÿÿÿ8öŸ²Ÿø/
+D
+java:S1144".Remove this unused private "testStack" method.(»ÀÃí
+i
+java:S1192("NDefine a constant instead of duplicating this literal "add element: " 8 times.(ˆğ«Ôÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(è©µ³şÿÿÿÿ
