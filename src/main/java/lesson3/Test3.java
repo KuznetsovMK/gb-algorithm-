@@ -2,11 +2,10 @@ package lesson3;
 
 
 import lesson3.queue.Queue;
-import lesson3.queue.QueueImpl;
 import lesson3.stack.Stack;
-import lesson3.stack.StackImpl;
+import lesson4.LinkedDeque;
 import lesson4.LinkedListStack;
-import lesson4.LinkedQueue;
+import lesson4.deque.Deque;
 
 public class Test3 {
 
@@ -29,25 +28,30 @@ public class Test3 {
 
         stack.display();
 
-        System.out.println("top value: " + stack.pop() );
-        System.out.println("top value: " + stack.peek() );
+        System.out.println("top value: " + stack.pop());
+        System.out.println("top value: " + stack.peek());
         stack.display();
     }
 
     private static void testQueue() {
 
-        Queue<Integer> queue = new LinkedQueue<>();
+        Deque<Integer> queue = new LinkedDeque<>();
 
-        System.out.println("add element: " + queue.insert(34));
-        System.out.println("add element: " + queue.insert(12));
-        System.out.println("add element: " + queue.insert(20));
-        System.out.println("add element: " + queue.insert(16));
-        System.out.println("add element: " + queue.insert(14));
-        System.out.println("add element: " + queue.insert(17));
+        System.out.println("add element: " + queue.insertLeft(34));
+        System.out.println("add element: " + queue.insertLeft(12));
+        System.out.println("add element: " + queue.insertLeft(20));
+        System.out.println("add element: " + queue.insertLeft(16));
+        System.out.println("add element: " + queue.insertLeft(14));
+        System.out.println("add element: " + queue.insertLeft(17));
+        System.out.println("add element: " + queue.insertRight(55));
+        System.out.println("add element: " + queue.insertRight(66));
+
 
         queue.display();
-        System.out.println("remove: " + queue.remove());
+        System.out.println("remove: " + queue.removeLeft());
+        System.out.println("remove: " + queue.removeRight());
         queue.display();
+
 
     }
 

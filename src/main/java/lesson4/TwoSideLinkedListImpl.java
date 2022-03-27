@@ -1,40 +1,74 @@
 package lesson4;
 
+import java.util.Iterator;
+
 public class TwoSideLinkedListImpl<E> extends SimpleLinkedListImpl<E> implements TwoSideLinkedList<E> {
 
     protected Node<E> last;
 
     @Override
     public void insertFirst(E value) {
-        super.insertFirst(value);
-        if (size == 1) {
-            last = first;
+        Node<E> first = this.first;
+        Node<E> newNode = new Node<E>(value, first, null);
+        this.first = newNode;
+        if (first == null) {
+            this.last = newNode;
+        } else {
+            first.prev = newNode;
         }
-    }
-
-    @Override
-    public void insertLast(E value) {
-        if (isEmpty()) {
-            insertFirst(value);
-            return;
-        }
-
-        last.next = last  = new Node<>(value, null);
-//        newNode  = new Node<>(value, null);
-//        last.next = newNode;
-//        last = newNode;
         size++;
     }
 
     @Override
-    public E removeFirst() {
-        E removedValue = super.removeFirst();
+    public void insertLast(E value) {
+        Node<E> last = this.last;
+        Node<E> newNode = new Node<>(value, null, last);
+        this.last = newNode;
+        if (last == null) {
+            this.first = newNode;
+        } else {
+            last.next = newNode;
+        }
+        size++;
+    }
 
-        if (isEmpty()) {
-            last = null;
+    @Override
+    public E removeLast() {
+        Node<E> last = this.last;
+        E element = last.item;
+        Node<E> prev = last.prev;
+        last.item = null;
+        last.prev = null;
+        this.last = prev;
+        if (prev == null) {
+            this.first = null;
+        } else {
+            prev.next = null;
         }
 
-        return removedValue;
+        --this.size;
+        return element;
+    }
+
+    @Override
+    public E removeFirst() {
+        if (isEmpty()) {
+            return null;
+        }
+        Node<E> first = this.first;
+        E element = first.item;
+        Node<E> next = first.next;
+        first.item = null;
+        first.next = null;
+        this.first = next;
+        if (next == null) {
+            this.last = null;
+        } else {
+            next.prev = null;
+        }
+
+        --this.size;
+        return element;
     }
 
     @Override
@@ -73,5 +107,30 @@ public class TwoSideLinkedListImpl<E> extends SimpleLinkedListImpl<E> implements
     @Override
     public E getLast() {
         return last.item;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new ListIterator<>(this);
+    }
+
+    private class ListIterator<E> implements Iterator<E> {
+
+        private TwoSideLinkedList<E> linkedList;
+
+        public ListIterator(TwoSideLinkedList<E> linkedList) {
+            this.linkedList = linkedList;
+        }
+
+
+        @Override
+        public boolean hasNext() {
+            return linkedList.size() > 0;
+        }
+
+        @Override
+        public E next() {
+            return linkedList.removeFirst();
+        }
     }
 }
